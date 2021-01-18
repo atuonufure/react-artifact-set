@@ -53,7 +53,7 @@ const Sands = () => {
   }
 
   const arrSands = [];
-  while (arrSands.length < calcAnyArray([4])) {
+  while (arrSands.length < calcAnyArray([3, 4])) {
     const r = Math.floor(Math.random() * 10) + 1;
     if (arrSands.indexOf(r) === -1) if (r !== mainStatIndex) arrSands.push(r);
   }

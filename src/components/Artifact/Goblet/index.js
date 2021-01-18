@@ -70,7 +70,7 @@ const Goblet = () => {
   }
 
   const arrGoblet = [];
-  while (arrGoblet.length < calcAnyArray([4])) {
+  while (arrGoblet.length < calcAnyArray([3, 4])) {
     const r = Math.floor(Math.random() * 10) + 1;
     if (arrGoblet.indexOf(r) === -1) if (r !== mainStatIndex) arrGoblet.push(r);
   }
