@@ -13,7 +13,7 @@ import {
   random_percent_HP,
 } from '../../calc';
 
-const Feather = () => {
+const Sands = () => {
   const [flatHP, setFlatHP] = useState(random_flat_HP);
   const [flatATK, setFlatATK] = useState(random_flat_ATK);
   const [flatDEF, setFlatDEF] = useState(random_flat_DEF);
@@ -25,13 +25,37 @@ const Feather = () => {
   const [critRate, setCritRate] = useState(random_CRIT_Rate);
   const [critDmg, setCritDmg] = useState(random_CRIT_DMG);
 
-  const arrFeather = [];
-  while (arrFeather.length < calcAnyArray([3, 4])) {
-    const r = Math.floor(Math.random() * 10) + 1;
-    if (arrFeather.indexOf(r) === -1) if (r !== 2) arrFeather.push(r);
+  let mainStatValue = 0;
+
+  const mainStatIndex = calcAnyArray([4, 5, 6, 7, 8]);
+  console.log(mainStatIndex);
+  switch (mainStatIndex) {
+    case 4:
+      mainStatValue = `HP +${percentHP}%`;
+      break;
+    case 5:
+      mainStatValue = `ATK +${percentATK}%`;
+      break;
+    case 6:
+      mainStatValue = `DEF +${percentDEF}%`;
+      break;
+    case 7:
+      mainStatValue = `Elemental Mastery +${elementalMastery}`;
+      break;
+    case 8:
+      mainStatValue = `Energy Recharge +${energyRecharge}%`;
+      break;
+    default:
+      console.log('fail mainstat');
   }
 
-  const FeatherSubStats = arrFeather.map(function (item, index, array) {
+  const arrSands = [];
+  while (arrSands.length < calcAnyArray([3, 4])) {
+    const r = Math.floor(Math.random() * 10) + 1;
+    if (arrSands.indexOf(r) === -1) if (r !== mainStatIndex) arrSands.push(r);
+  }
+
+  const SandsSubStats = arrSands.map(function (item, index, array) {
     switch (item) {
       case 1:
         return <div key={Math.random()}>HP +{flatHP} </div>;
@@ -62,14 +86,14 @@ const Feather = () => {
     <div>
       <div>
         <img
-          src="https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Item_Icebreaker%27s_Resolve.png"
+          src="https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Frozen_Homeland%27s_Demise.png"
           className="App-logo"
           alt="logo"
         />
-        <div>ATK 47</div>
+        <div>{mainStatValue}</div>
         <div>⭐⭐⭐⭐⭐</div>
         <div>+0</div>
-        {FeatherSubStats}
+        {SandsSubStats}
         <button
           onClick={() =>
             setFlatHP(random_flat_HP) &
@@ -90,4 +114,4 @@ const Feather = () => {
   );
 };
 
-export default Feather;
+export default Sands;

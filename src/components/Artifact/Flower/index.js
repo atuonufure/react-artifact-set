@@ -17,9 +17,9 @@ const Flower = () => {
   const [flatHP, setFlatHP] = useState(random_flat_HP);
   const [flatATK, setFlatATK] = useState(random_flat_ATK);
   const [flatDEF, setFlatDEF] = useState(random_flat_DEF);
-  const [flatPercentHP, setFlatPercentHP] = useState(random_percent_HP);
-  const [flatPercentATK, setFlatPercentATK] = useState(random_percent_ATK);
-  const [flatPercentDEF, setFlatPercentDEF] = useState(random_percent_DEF);
+  const [percentHP, setPercentHP] = useState(random_percent_HP);
+  const [percentATK, setPercentATK] = useState(random_percent_ATK);
+  const [percentDEF, setPercentDEF] = useState(random_percent_DEF);
   const [elementalMastery, setElementalMastery] = useState(random_ElementalMastery);
   const [energyRecharge, setEnergyRecharge] = useState(random_EnergyRecharge);
   const [critRate, setCritRate] = useState(random_CRIT_Rate);
@@ -34,25 +34,25 @@ const Flower = () => {
   const flowerSubStats = arrFlower.map(function (item, index, array) {
     switch (item) {
       case 1:
-        return <div>HP +{flatHP} </div>;
+        return <div key={Math.random()}>HP +{flatHP} </div>;
       case 2:
-        return <div>ATK +{flatATK} </div>;
+        return <div key={Math.random()}>ATK +{flatATK} </div>;
       case 3:
-        return <div>DEF +{flatDEF} </div>;
+        return <div key={Math.random()}>DEF +{flatDEF} </div>;
       case 4:
-        return <div>HP +{flatPercentHP}% </div>;
+        return <div key={Math.random()}>HP +{percentHP}% </div>;
       case 5:
-        return <div>ATK +{flatPercentATK}% </div>;
+        return <div key={Math.random()}>ATK +{percentATK}% </div>;
       case 6:
-        return <div>DEF +{flatPercentDEF}% </div>;
+        return <div key={Math.random()}>DEF +{percentDEF}% </div>;
       case 7:
-        return <div>Elemental Mastery +{elementalMastery} </div>;
+        return <div key={Math.random()}>Elemental Mastery +{elementalMastery} </div>;
       case 8:
-        return <div>Energy Recharge +{energyRecharge}% </div>;
+        return <div key={Math.random()}>Energy Recharge +{energyRecharge}% </div>;
       case 9:
-        return <div>CRIT Rate +{critRate}% </div>;
+        return <div key={Math.random()}>CRIT Rate +{critRate}% </div>;
       case 10:
-        return <div>CRIT DMG +{critDmg}% </div>;
+        return <div key={Math.random()}>CRIT DMG +{critDmg}% </div>;
       default:
         return alert('fail');
     }
@@ -75,9 +75,9 @@ const Flower = () => {
             setFlatHP(random_flat_HP) &
             setFlatATK(random_flat_ATK) &
             setFlatDEF(random_flat_DEF) &
-            setFlatPercentHP(random_percent_HP) &
-            setFlatPercentATK(random_percent_ATK) &
-            setFlatPercentDEF(random_percent_DEF) &
+            setPercentHP(random_percent_HP) &
+            setPercentATK(random_percent_ATK) &
+            setPercentDEF(random_percent_DEF) &
             setElementalMastery(random_ElementalMastery) &
             setEnergyRecharge(random_EnergyRecharge) &
             setCritRate(random_CRIT_Rate) &
