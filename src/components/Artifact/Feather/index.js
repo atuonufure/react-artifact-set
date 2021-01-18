@@ -60,7 +60,7 @@ const Feather = () => {
 
   return (
     <div>
-      <div>
+      <div className="artifact">
         <img
           src="https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Item_Icebreaker%27s_Resolve.png"
           className="App-logo"
@@ -69,7 +69,7 @@ const Feather = () => {
         <div>ATK 47</div>
         <div>⭐⭐⭐⭐⭐</div>
         <div>+0</div>
-        {FeatherSubStats}
+        <div className="substats">{FeatherSubStats}</div>
         <button
           onClick={() =>
             setFlatHP(random_flat_HP) &

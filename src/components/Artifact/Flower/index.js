@@ -60,7 +60,7 @@ const Flower = () => {
 
   return (
     <div>
-      <div>
+      <div className="artifact">
         <img
           src="https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Snowswept_Memory.png"
           className="App-logo"
@@ -69,7 +69,7 @@ const Flower = () => {
         <div>HP 717</div>
         <div>⭐⭐⭐⭐⭐</div>
         <div>+0</div>
-        {flowerSubStats}
+        <div className="substats">{flowerSubStats}</div>
         <button
           onClick={() =>
             setFlatHP(random_flat_HP) &

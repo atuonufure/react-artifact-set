@@ -10,3 +10,11 @@ export const random_ElementalMastery = () => calcAnyArray([16, 19, 21, 23]);
 export const random_EnergyRecharge = () => calcAnyArray([4.5, 5.2, 5.8, 6.5]);
 export const random_CRIT_Rate = () => calcAnyArray([2.7, 3.1, 3.5, 3.9]);
 export const random_CRIT_DMG = () => calcAnyArray([5.4, 6.2, 7.0, 7.8]);
+
+export const mainLowDmg = 7.0;
+export const mainHighDmg = 8.7;
+export const mainElemental = 28;
+export const mainEnergy = 7.8;
+export const mainCritRate = 4.7;
+export const mainCritDmg = 9.3;
+export const mainHealing = 5.4;

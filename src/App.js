@@ -1,8 +1,10 @@
 import Feather from './components/Artifact/Feather';
 import Flower from './components/Artifact/Flower';
+import Sands from './components/Artifact/Sands';
+import Goblet from './components/Artifact/Goblet';
+import Circlet from './components/Artifact/Circlet';
 
 import './App.css';
-import Sands from './components/Artifact/Sands';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
         <Flower />
         <Feather />
         <Sands />
+        <Goblet />
+        <Circlet />
       </header>
     </div>
   );

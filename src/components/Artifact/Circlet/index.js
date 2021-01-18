@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import {
   calcAnyArray,
+  mainCritDmg,
+  mainCritRate,
   mainElemental,
-  mainEnergy,
+  mainHealing,
   mainHighDmg,
   mainLowDmg,
   random_CRIT_DMG,
@@ -17,9 +19,7 @@ import {
   random_percent_HP,
 } from '../../calc';
 
-let mainStatValue = 0;
-
-const Sands = () => {
+const Circlet = () => {
   const [flatHP, setFlatHP] = useState(random_flat_HP);
   const [flatATK, setFlatATK] = useState(random_flat_ATK);
   const [flatDEF, setFlatDEF] = useState(random_flat_DEF);
@@ -31,7 +31,9 @@ const Sands = () => {
   const [critRate, setCritRate] = useState(random_CRIT_Rate);
   const [critDmg, setCritDmg] = useState(random_CRIT_DMG);
 
-  const mainStatIndex = calcAnyArray([4, 5, 6, 7, 8]);
+  let mainStatValue = 0;
+
+  const mainStatIndex = calcAnyArray([4, 5, 6, 7, 9, 10, 18]);
   console.log(mainStatIndex);
   switch (mainStatIndex) {
     case 4:
@@ -50,21 +52,29 @@ const Sands = () => {
       mainStatValue = `Elemental Mastery ${mainElemental}`;
       console.log(`Elemental Mastery ${mainElemental}`);
       break;
-    case 8:
-      mainStatValue = `Energy Recharge ${mainEnergy}%`;
-      console.log(`Energy Recharge ${mainEnergy}%`);
+    case 9:
+      mainStatValue = `CRIT Rate ${mainCritRate}%`;
+      console.log(`CRIT Rate ${mainCritRate}%`);
+      break;
+    case 10:
+      mainStatValue = `CRIT DMG ${mainCritDmg}%`;
+      console.log(`CRIT DMG ${mainCritDmg}%`);
+      break;
+    case 18:
+      mainStatValue = `Healing Bonus ${mainHealing}%`;
+      console.log(`Healing Bonus ${mainHealing}%`);
       break;
     default:
       console.log('fail mainstat');
   }
 
-  const arrSands = [];
-  while (arrSands.length < calcAnyArray([4])) {
+  const arrCirclet = [];
+  while (arrCirclet.length < calcAnyArray([3, 4])) {
     const r = Math.floor(Math.random() * 10) + 1;
-    if (arrSands.indexOf(r) === -1) if (r !== mainStatIndex) arrSands.push(r);
+    if (arrCirclet.indexOf(r) === -1) if (r !== mainStatIndex) arrCirclet.push(r);
   }
 
-  const SandsSubStats = arrSands.map(function (item, index, array) {
+  const CircletSubStats = arrCirclet.map(function (item, index, array) {
     switch (item) {
       case 1:
         return <div key={Math.random()}>HP +{flatHP} </div>;
@@ -95,14 +105,14 @@ const Sands = () => {
     <div>
       <div className="artifact">
         <img
-          src="https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Frozen_Homeland%27s_Demise.png"
+          src="https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Broken_Rime%27s_Echo.png"
           className="App-logo"
           alt="logo"
         />
         <div>{mainStatValue}</div>
         <div>⭐⭐⭐⭐⭐</div>
         <div>+0</div>
-        <div className="substats">{SandsSubStats}</div>
+        <div className="substats">{CircletSubStats}</div>
         <button
           onClick={() =>
             setFlatHP(random_flat_HP) &
@@ -123,4 +133,4 @@ const Sands = () => {
   );
 };
 
-export default Sands;
+export default Circlet;
