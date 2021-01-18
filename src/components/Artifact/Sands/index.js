@@ -32,27 +32,21 @@ const Sands = () => {
   const [critDmg, setCritDmg] = useState(random_CRIT_DMG);
 
   const mainStatIndex = calcAnyArray([4, 5, 6, 7, 8]);
-  console.log(mainStatIndex);
   switch (mainStatIndex) {
     case 4:
       mainStatValue = `HP ${mainLowDmg}%`;
-      console.log(`HP ${mainLowDmg}%`);
       break;
     case 5:
       mainStatValue = `ATK ${mainLowDmg}%`;
-      console.log(`ATK ${mainLowDmg}%`);
       break;
     case 6:
       mainStatValue = `DEF ${mainHighDmg}%`;
-      console.log(`DEF ${mainHighDmg}%`);
       break;
     case 7:
       mainStatValue = `Elemental Mastery ${mainElemental}`;
-      console.log(`Elemental Mastery ${mainElemental}`);
       break;
     case 8:
       mainStatValue = `Energy Recharge ${mainEnergy}%`;
-      console.log(`Energy Recharge ${mainEnergy}%`);
       break;
     default:
       console.log('fail mainstat');

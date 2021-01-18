@@ -31,7 +31,6 @@ const Goblet = () => {
   let mainStatValue = 0;
 
   const mainStatIndex = calcAnyArray([4, 5, 6, 7, 11, 12, 13, 14, 15, 16, 17]);
-  console.log(mainStatIndex);
   switch (mainStatIndex) {
     case 4:
       mainStatValue = `HP ${mainLowDmg}%`;
