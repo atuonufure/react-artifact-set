@@ -34,38 +34,29 @@ const Circlet = () => {
   let mainStatValue = 0;
 
   const mainStatIndex = calcAnyArray([4, 5, 6, 7, 9, 10, 18]);
-  console.log(mainStatIndex);
   switch (mainStatIndex) {
     case 4:
       mainStatValue = `HP ${mainLowDmg}%`;
-      console.log(`HP ${mainLowDmg}%`);
       break;
     case 5:
       mainStatValue = `ATK ${mainLowDmg}%`;
-      console.log(`ATK ${mainLowDmg}%`);
       break;
     case 6:
       mainStatValue = `DEF ${mainHighDmg}%`;
-      console.log(`DEF ${mainHighDmg}%`);
       break;
     case 7:
       mainStatValue = `Elemental Mastery ${mainElemental}`;
-      console.log(`Elemental Mastery ${mainElemental}`);
       break;
     case 9:
       mainStatValue = `CRIT Rate ${mainCritRate}%`;
-      console.log(`CRIT Rate ${mainCritRate}%`);
       break;
     case 10:
       mainStatValue = `CRIT DMG ${mainCritDmg}%`;
-      console.log(`CRIT DMG ${mainCritDmg}%`);
       break;
     case 18:
       mainStatValue = `Healing Bonus ${mainHealing}%`;
-      console.log(`Healing Bonus ${mainHealing}%`);
       break;
     default:
-      console.log('fail mainstat');
   }
 
   const arrCirclet = [];
@@ -97,7 +88,7 @@ const Circlet = () => {
       case 10:
         return <div key={Math.random()}>CRIT DMG +{critDmg}% </div>;
       default:
-        return alert('fail');
+        return console.log('fail mainstat');
     }
   });
 

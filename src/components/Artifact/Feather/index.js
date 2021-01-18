@@ -54,7 +54,7 @@ const Feather = () => {
       case 10:
         return <div key={Math.random()}>CRIT DMG +{critDmg}% </div>;
       default:
-        return alert('fail');
+        return console.log('fail mainstat');
     }
   });
 
