@@ -1,0 +1,15 @@
+export const hp_stat = { en: 'HP', ru: 'HP' };
+export const atk_stat = { en: 'ATK', ru: 'Сила атаки' };
+export const critDmg_stat = { en: 'CRIT DMG', ru: 'Крит. урон' };
+export const critRate_stat = { en: 'CRIT Rate', ru: 'Шанс крит. попадания' };
+export const def_stat = { en: 'DEF', ru: 'Защита' };
+export const element_stat = { en: 'Elemental Mastery', ru: 'Мастерство стихий' };
+export const energy_stat = { en: 'Energy Recharge', ru: 'Восст. энергии' };
+export const heal_stat = { en: 'Healing Bonus', ru: 'Бонус лечения' };
+export const phys_stat = { en: 'Physical DMG Bonus', ru: 'Бонус физ. урона' };
+export const pyro_stat = { en: 'Pyro DMG Bonus', ru: 'Бонус Пиро урона' };
+export const electro_stat = { en: 'Electro DMG Bonus', ru: 'Бонус Электро урона' };
+export const cryo_stat = { en: 'Cryo DMG Bonus', ru: 'Бонус Крио урона' };
+export const hydro_stat = { en: 'Hydro DMG Bonus', ru: 'Бонус Гидро урона' };
+export const anemo_stat = { en: 'Anemo DMG Bonus', ru: 'Бонус Анемо урона' };
+export const geo_stat = { en: 'Geo DMG Bonus', ru: 'Бонус Гео урона' };

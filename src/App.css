@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.App-main {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -29,10 +29,6 @@
   color: #61dafb;
 }
 
-.artifact {
-  width: 50vh;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -40,4 +36,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  height: 5vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.languageChanger {
+  margin: 0px 10px 0px 10px;
+  width: 10vh;
+  height: 5vh;
+}
+
+.component {
+  width: 50vh;
 }

@@ -14,4 +14,21 @@ button {
   margin: 5vh;
   width: 20vh;
   height: 5vh;
+  border-radius: 30px;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: antiquewhite;
+  color: midnightblue;
+  font-size: calc(6px + 2vmin);
+  transition-duration: 0.1s;
+}
+
+button:hover {
+  background-color: rgb(255, 244, 228);
+  transition-duration: 0.1s;
+}
+
+button:active {
+  background-color: rgba(250, 235, 215, 0.11);
+  color: antiquewhite;
+  transition-duration: 0.1s;
 }
