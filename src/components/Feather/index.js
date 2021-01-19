@@ -22,6 +22,7 @@ import {
   energy_stat,
   hp_stat,
 } from '../../helpers/languages';
+import featherImg from '../../assets/plume.png';
 
 const Feather = () => {
   const [flatHP, setFlatHP] = useState(random_flat_HP);
@@ -110,11 +111,7 @@ const Feather = () => {
 
   return (
     <div className="component">
-      <img
-        src="https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Item_Icebreaker%27s_Resolve.png"
-        className="App-logo"
-        alt="logo"
-      />
+      <img src={featherImg} className="artifact" alt="feather" />
       <div>{translate(atk_stat)} 47</div>
       <div>⭐⭐⭐⭐⭐</div>
       <div>+0</div>

@@ -29,6 +29,7 @@ import {
   heal_stat,
   hp_stat,
 } from '../../helpers/languages';
+import circletImg from '../../assets/circlet.png';
 
 const Circlet = () => {
   const [flatHP, setFlatHP] = useState(random_flat_HP);
@@ -145,11 +146,7 @@ const Circlet = () => {
 
   return (
     <div className="component">
-      <img
-        src="https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Broken_Rime%27s_Echo.png"
-        className="App-logo"
-        alt="logo"
-      />
+      <img src={circletImg} className="artifact" alt="circlet" />
       <div>{mainStatValue}</div>
       <div>⭐⭐⭐⭐⭐</div>
       <div>+0</div>
