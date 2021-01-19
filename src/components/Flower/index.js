@@ -22,6 +22,7 @@ import {
   energy_stat,
   hp_stat,
 } from '../../helpers/languages';
+import flowerImg from '../../assets/flower.png';
 
 const Flower = () => {
   const [flatHP, setFlatHP] = useState(random_flat_HP);
@@ -110,11 +111,7 @@ const Flower = () => {
 
   return (
     <div className="component">
-      <img
-        src="https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Snowswept_Memory.png"
-        className="App-logo"
-        alt="logo"
-      />
+      <img src={flowerImg} className="artifact" alt="flower" />
       <div>{translate(hp_stat)} 717</div>
       <div>⭐⭐⭐⭐⭐</div>
       <div>+0</div>

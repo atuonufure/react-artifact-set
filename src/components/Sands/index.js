@@ -26,6 +26,7 @@ import {
   atk_stat,
   hp_stat,
 } from '../../helpers/languages';
+import sandsImg from '../../assets/sands.png';
 
 let mainStatValue = 0;
 
@@ -137,11 +138,7 @@ const Sands = () => {
 
   return (
     <div className="component">
-      <img
-        src="https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Frozen_Homeland%27s_Demise.png"
-        className="App-logo"
-        alt="logo"
-      />
+      <img src={sandsImg} className="artifact" alt="sands" />
       <div>{mainStatValue}</div>
       <div>⭐⭐⭐⭐⭐</div>
       <div>+0</div>

@@ -32,6 +32,7 @@ import {
   phys_stat,
   pyro_stat,
 } from '../../helpers/languages';
+import gobletImg from '../../assets/goblet.png';
 
 const Goblet = () => {
   const [flatHP, setFlatHP] = useState(random_flat_HP);
@@ -161,11 +162,7 @@ const Goblet = () => {
 
   return (
     <div className="component">
-      <img
-        src="https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Item_Frost-Weaved_Dignity.png"
-        className="App-logo"
-        alt="logo"
-      />
+      <img src={gobletImg} className="artifact" alt="goblet" />
       <div>{mainStatValue}</div>
       <div>⭐⭐⭐⭐⭐</div>
       <div>+0</div>
