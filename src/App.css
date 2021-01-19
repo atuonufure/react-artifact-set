@@ -47,10 +47,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  padding-bottom: 1vh;
 }
 
 .languageChanger {
-  margin: 0px 10px 0px 10px;
+  margin: 0 10px 0 10px;
   width: 10vh;
   height: 5vh;
 }
