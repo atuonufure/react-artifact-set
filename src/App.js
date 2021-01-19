@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Feather from './components/Feather';
 import Flower from './components/Flower';
 import Sands from './components/Sands';
@@ -5,7 +7,6 @@ import Goblet from './components/Goblet';
 import Circlet from './components/Circlet';
 
 import './App.css';
-import { useState } from 'react';
 
 export let language = 'en';
 export const translate = (stat) => {
@@ -13,7 +14,8 @@ export const translate = (stat) => {
 };
 
 function App() {
-  const [state, setState] = useState('en');
+  const [state, setState] = useState(language);
+
   return (
     <div className="App">
       <header className="App-header">
