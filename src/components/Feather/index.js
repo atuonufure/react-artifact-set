@@ -12,7 +12,6 @@ import {
   random_percent_DEF,
   random_percent_HP,
 } from '../../helpers/calc';
-import { translate } from '../../App';
 import {
   atk_stat,
   critDmg_stat,
@@ -24,7 +23,7 @@ import {
 } from '../../helpers/languages';
 import featherImg from '../../assets/plume.png';
 
-const Feather = () => {
+const Feather = ({ translate }) => {
   const [flatHP, setFlatHP] = useState(random_flat_HP);
   const [flatATK, setFlatATK] = useState(random_flat_ATK);
   const [flatDEF, setFlatDEF] = useState(random_flat_DEF);

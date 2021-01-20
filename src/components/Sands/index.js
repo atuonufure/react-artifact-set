@@ -16,7 +16,6 @@ import {
   random_percent_DEF,
   random_percent_HP,
 } from '../../helpers/calc';
-import { translate } from '../../App';
 import {
   critDmg_stat,
   critRate_stat,
@@ -30,7 +29,7 @@ import sandsImg from '../../assets/sands.png';
 
 let mainStatValue = 0;
 
-const Sands = () => {
+const Sands = ({ translate }) => {
   const [flatHP, setFlatHP] = useState(random_flat_HP);
   const [flatATK, setFlatATK] = useState(random_flat_ATK);
   const [flatDEF, setFlatDEF] = useState(random_flat_DEF);

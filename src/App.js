@@ -8,32 +8,30 @@ import Circlet from './components/Circlet';
 
 import './App.css';
 
-export let language = 'en';
-export const translate = (stat) => {
-  return stat[language];
-};
-
 function App() {
-  const [state, setState] = useState(language);
+  const [state, setState] = useState('en');
+  const translate = (stat) => {
+    return stat[state];
+  };
 
   return (
     <div className="App">
       <header className="App-header">
         <div>
-          <button className="languageChanger" onClick={() => (language = 'en') & setState('en')}>
+          <button className="languageChanger" onClick={() => setState('en')}>
             EN
           </button>
-          <button className="languageChanger" onClick={() => (language = 'ru') & setState('ru')}>
+          <button className="languageChanger" onClick={() => setState('ru')}>
             RU
           </button>
         </div>
       </header>
       <div className="App-main">
-        <Flower />
-        <Feather />
-        <Sands />
-        <Goblet />
-        <Circlet />
+        <Flower translate={translate} />
+        <Feather translate={translate} />
+        <Sands translate={translate} />
+        <Goblet translate={translate} />
+        <Circlet translate={translate} />
       </div>
     </div>
   );
